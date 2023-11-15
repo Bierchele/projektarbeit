@@ -2,49 +2,31 @@
 \section{Anhang}
 \subsection{Detaillierte Zeitplanung}
 \label{app:Zeitplanung}
-
-\tabelleAnhang{ZeitplanungKomplett}
+\vspace{20mm}
+\begin{*figure}
+\centering
+\renewcommand{\floatpagefraction}{0.8}
+\includegraphicsKeepAspectRatio{Ganttdiagramm.png}{0.8}
+\end{figure*}
+\clearpage
 
 \input{Anhang/AnhangLastenheft.tex}
 \clearpage
 
-\subsection{Use Case-Diagramm}
+\subsection{Anwendungsfalldiagramm}
 \label{app:UseCase}
-Use Case-Diagramme und weitere \acs{UML}-Diagramme kann man auch direkt mit \LaTeX{} zeichnen, siehe \zB \url{http://metauml.sourceforge.net/old/usecase-diagram.html}.
+\vspace{20mm}
 \begin{figure}[htb]
 \centering
-\includegraphicsKeepAspectRatio{UseCase.pdf}{0.7}
-\caption{Use Case-Diagramm}
-\end{figure}
-
-\input{Anhang/AnhangPflichtenheft.tex}
-
-\subsection{Datenbankmodell}
-\label{app:Datenbankmodell}
-ER-Modelle kann man auch direkt mit \LaTeX{} zeichnen, siehe \zB \url{http://www.texample.net/tikz/examples/entity-relationship-diagram/}.
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{database.pdf}{1}
-\caption{Datenbankmodell}
+\includegraphicsKeepAspectRatio{Anwendungsfalldiagramm.pdf}{1}
+\caption{Anwendungsfalldiagramm}
 \end{figure}
 \clearpage
 
-\input{Anhang/AnhangEntwuerfe.tex}
-\clearpage
-\input{Anhang/AnhangScreenshots.tex}
-\input{Anhang/AnhangDoc.tex}
-\clearpage
-\input{Anhang/AnhangTest.tex}
-
-\subsection{Klasse: ComparedNaturalModuleInformation}
-\label{app:CNMI}
-Kommentare und simple Getter/Setter werden nicht angezeigt.
-\lstinputlisting[language=php, caption={Klasse: ComparedNaturalModuleInformation}]{Listings/cnmi.php}
-\clearpage
 
 \subsection{Klassendiagramm}
 \label{app:Klassendiagramm}
-Klassendiagramme und weitere \acs{UML}-Diagramme kann man auch direkt mit \LaTeX{} zeichnen, siehe \zB \url{http://metauml.sourceforge.net/old/class-diagram.html}.
+\vspace{20mm}
 \begin{figure}[htb]
 \centering
 \includegraphicsKeepAspectRatio{Klassendiagramm.pdf}{1}
@@ -52,4 +34,19 @@ Klassendiagramme und weitere \acs{UML}-Diagramme kann man auch direkt mit \LaTeX
 \end{figure}
 \clearpage
 
-\input{Anhang/AnhangBenutzerDoku.tex}
+
+\input{Anhang/AnhangPflichtenheft.tex}
+\clearpage
+\input{Anhang/AnhangProzesskosten.tex}
+\clearpage
+\input{Anhang/AnhangAmortisation.tex}
+\clearpage
+
+\input{Anhang/AnhangScreenshots.tex}
+\clearpage
+\input{Anhang/AnhangTest.tex}
+
+
+
+
+

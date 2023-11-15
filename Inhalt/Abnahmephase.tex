@@ -2,10 +2,24 @@
 \section{Abnahmephase} 
 \label{sec:Abnahmephase}
 
-\begin{itemize}
-	\item Welche Tests (\zB Unit-, Integrations-, Systemtests) wurden durchgeführt und welche Ergebnisse haben sie geliefert (\zB Logs von Unit Tests, Testprotokolle der Anwender)?
-	\item Wurde die Anwendung offiziell abgenommen?
-\end{itemize}
+\paragraph{Testprotokoll} 
+In der Abnahmephase werden Integrationstests mithilfe des Python unittest-Pakets 
+durchgeführt. Die externen Schnittstellen der Klassen werden gemockt,
+wodurch die Antworten der Zendesk-Schnittstelle und des \ac{LLaMA}-2-Modells
+nachgebildet werden, um die Korrektheit der internen Funktionen zu validieren. 
+Darüber hinaus wird die Anwendung manuell getestet, indem sie realistische Test-Support-Fälle bearbeitet.
+
+
+\paragraph{Offzielle Abnahme}
+Bei den manuellen Tests stellt sich heraus, dass die Anwendung noch 
+nicht präzise genug ist, um für den produktiven Einsatz freigegeben zu werden. 
+Dies ist hauptsächlich auf die begrenzte Entwicklungszeit und die 
+eingeschränkten Hardware-Ressourcen zurückzuführen. 
+Um die erforderliche Präzision sicherzustellen, wäre es notwendig, 
+das \ac{LLaMA}-2-Modell speziell für diesen Anwendungsfall zu trainieren.
+Aus diesem Grund konnte die Anwendung noch nicht in Produktion genommen werden.
+
 
 \paragraph{Beispiel}
 Ein Auszug eines Unit Tests befindet sich im \Anhang{app:Test}. Dort ist auch der Aufruf des Tests auf der Konsole des Webservers zu sehen.
+ 

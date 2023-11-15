@@ -2,36 +2,70 @@
 \section{Implementierungsphase} 
 \label{sec:Implementierungsphase}
 
-\subsection{Implementierung der Datenstrukturen}
-\label{sec:ImplementierungDatenstrukturen}
+\subsection{Implementierung des Generativen Transformers}
+\label{sec:ImplementierungGenerativenTransformers}
+Die Implementierung des Generativen Transformers erfolgte unter Verwendung des Klassendiagramms 
+aus Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign} als Vorlage.
+Der erste Schritt bestand darin, die lokale Konfiguration des \ac{LLaMA}-2 Modells durchzuführen. 
+Um diese Konfiguration zu starten, musste das Modell zunächst heruntergeladen werden.
+Hierfür wurde das Repository von Meta geklont und nach der Registrierung auf der Webseite wurde ein 
+Freischaltungslink erhalten. Dieser Link wurde als Parameter für ein Bash-Skript verwendet, 
+um das gewünschte Modell auszuwählen und herunterzuladen.
 
+\paragraph{Die folgenden Schritte umfassten:} 
 \begin{itemize}
-	\item Beschreibung der angelegten Datenbank (\zB Generierung von \acs{SQL} aus Modellierungswerkzeug oder händisches Anlegen), \acs{XML}-Schemas \usw.
+	\item Die Konvertierung des Modells in das \ac{GGUF}-Format.
+	\item Die Quantifizierung des Modells.
 \end{itemize}
 
+Mithilfe der \ac{LLaMA}.cpp-Bibliothek war es möglich, das Modell mithilfe der convert.py-Funktion
+in das Zielformat GGUF zu konvertieren. Dieses Format ist ein generalisiertes Format für \ac{LLM}s 
+und bietet den Vorteil, dass ein \ac{LLM} nur mit einer CPU betrieben werden kann. 
+Aufgrund begrenzter Hardware-Ressourcen mussten die Tokens des \ac{LLaMA}-2-Modells gekürzt werden. 
+Tokens sind Wortkombinationen, die mit einer bestimmten Wahrscheinlichkeit aneinandergereiht werden. 
+Standardmäßig haben Tokens eine Länge von 16 Bit. Mit der quantize-Funktion von \ac{LLaMA}.cpp wurden 
+diese auf 4 Bits gekürzt, um eine schnellere Verarbeitung der Eingabe zu ermöglichen, 
+jedoch auf Kosten der Genauigkeit der Ausgabe.
 
-\subsection{Implementierung der Benutzeroberfläche}
+
+
+
+
+\subsection{Anbindung an die Zendesk Schnittstelle}
 \label{sec:ImplementierungBenutzeroberflaeche}
+In diesem Schritt wurde eine Verbindung zur Zendesk-Anwendungsschnittstelle hergestellt.
+Es gab verschiedene Möglichkeiten zur Authentifizierung. 
+Anstelle von Benutzername und Passwort wurde sich für die Verwendung eines \ac{API}-Tokens entschieden.
+Die Wahl des \ac{API}-Tokens erschien in diesem Fall sicherer, da dieser Token ausschließlich
+für diese Anwendung gilt, somit wird der Branchenstandard für Machine to Machine Kommunikation gewährleistet.
+Durch die Kombination von Benutzername und \ac{API}-Token ist es möglich, im Namen des Nutzers mit der 
+Anwendungsschnittstelle zu interagieren. Dies ermöglicht die 
+Überwachung der Support-Bots, da bei jeder Anfrage an die \ac{API} die
+erforderlichen Informationen mitgesendet werden.
 
-\begin{itemize}
-	\item Beschreibung der Implementierung der Benutzeroberfläche, falls dies separat zur Implementierung der Geschäftslogik erfolgt (\zB bei \acs{HTML}-Oberflächen und Stylesheets).
-	\item \Ggfs Beschreibung des Corporate Designs und dessen Umsetzung in der Anwendung.
-	\item Screenshots der Anwendung
-\end{itemize}
-
-\paragraph{Beispiel}
-Screenshots der Anwendung in der Entwicklungsphase mit Dummy-Daten befinden sich im \Anhang{Screenshots}.
-
+Ein Screenshot der implentierten Klasse befindet sich im \Anhang{Screenshots}.
 
 \subsection{Implementierung der Geschäftslogik}
 \label{sec:ImplementierungGeschaeftslogik}
+Die Geschäftslogik konzentriert sich hauptsächlich auf die Steuerung des Datenflusses
+zwischen der Zendesk-Anwendungsschnittstelle und dem \ac{LLaMA}-2-Modell.
+Ein Anwendungszyklus beginnt mit der Abfrage der Zendesk-Schnittstelle, 
+die im ZendeskService durchgeführt wird, um die Daten eines Support-Tickets abzurufen. ~\\
+Diese Daten werden anschließend in eine SupportTicket-Klasse umgewandelt. ~\\
+Der Inhalt der Support-Ticket-Klassen wird mithilfe von LangChain 
+in eine Vorlagen-Eingabe eingebettet. Diese Eingabe fordert das \ac{LLaMA}-Modell auf, 
+als Support-Mitarbeiter zu agieren und auf bestimmte Schlüsselwörter zu achten.
+Zum Beispiel, wenn das Ticket die Beschreibung ``E-Mail verloren, Neue Tickets'' enthält.
+Wird nun das Schlüsselwort \texttt{RESEND\_TICKET} erwartet. ~\\ Diese Logik wird in der 
+\texttt{classify\_tickets-Methode} der SupportAgent-Klasse umgesetzt. ~\\
+Nach der Klassifizierung des Inhalts des Support-Tickets wird das
+classification-Attribut ~\\ der SupportTicket-Klasse auf das entsprechende Schlüsselwort 
+gesetzt. In einem weiteren Schritt wird dieses Attribut ausgelesen, 
+um das passende Makro von der Zendesk-Anwendungsschnittstelle aufzurufen. 
+Die Antwort des Aufrufs wird dann in die Payload der \texttt{reply\_to\_customer-Methode}
+der ZendeskService-Klasse eingebettet, um eine Antwort für das Support-Ticket
+zu generieren. Dabei wird das \texttt{ticket\_id-Attribut} verwendet, 
+um die richtige Antwort dem entsprechenden Ticket zuzuordnen.
 
-\begin{itemize}
-	\item Beschreibung des Vorgehens bei der Umsetzung/Programmierung der entworfenen Anwendung.
-	\item \Ggfs interessante Funktionen/Algorithmen im Detail vorstellen, verwendete Entwurfsmuster zeigen.
-	\item Quelltextbeispiele zeigen.
-	\item Hinweis: Wie in Kapitel~\ref{sec:Einleitung}: \nameref{sec:Einleitung} zitiert, wird nicht ein lauffähiges Programm bewertet, sondern die Projektdurchführung. Dennoch würde ich immer Quelltextausschnitte zeigen, da sonst Zweifel an der tatsächlichen Leistung des Prüflings aufkommen können.
-\end{itemize}
-
-\paragraph{Beispiel}
-Die Klasse \texttt{Com\-par\-ed\-Na\-tu\-ral\-Mo\-dule\-In\-for\-ma\-tion} findet sich im \Anhang{app:CNMI}.  
+\paragraph{Auschnitt}
+Ein Auschnitt der SupportAgent-Klasse befindet sich im \Anhang{Screenshots}.

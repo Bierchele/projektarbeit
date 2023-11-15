@@ -1,44 +1,89 @@
 % !TEX root = ../Projektdokumentation.tex
 \section{Einleitung}
 \label{sec:Einleitung}
+Diese Projektdokumentation beschreibt den Verlauf meines IHK-Abschlussprojekts, 
+das im Rahmen meiner Ausbildung zum Fachinformatiker für Anwendungsentwicklung durchgeführt 
+wurde. Das Projekt hat zum Ziel, meine während der Ausbildung erworbenen 
+Fähigkeiten zu demonstrieren und meine Erfahrung in einem realistischen Projektszenario zu vertiefen.
+Die Projektarbeit wurde im Auftrag der ticket i/O GmbH durchgeführt.
 
+Die ticket i/O GmbH ist ein Unternehmen, das sich auf 
+Veranstaltungsticketdienstleistungen spezialisiert hat und als 
+Bindeglied zwischen Ticketkäufern und Veranstaltern fungiert. 
+Mithilfe einer webbasierten Anwendung ermöglicht sie Veranstaltern 
+die eigenständige Verwaltung von Veranstaltungen und Onlineshops im Self-Service. 
+Die Kunden-Support-Abteilung steht den Ticketkäufern bei sämtlichen 
+Fragen im Zusammenhang mit dem Kaufprozess zur Seite. 
+Das Hauptziel des Projekts besteht in der Teilautomatisierung dieser Support-Abteilung.
 
 \subsection{Projektumfeld} 
 \label{sec:Projektumfeld}
-\begin{itemize}
-	\item Kurze Vorstellung des Ausbildungsbetriebs (Geschäftsfeld, Mitarbeiterzahl \usw)
-	\item Wer ist Auftraggeber/Kunde des Projekts?
-\end{itemize}
+Im Jahr 2023 verzeichnet unser Unternehmen ein
+beachtliches Wachstum im Kundenstamm, was zu einem drastischen 
+Anstieg der Kunden-Support-Fälle führt. 
+Diese Support-Anfragen weisen häufig einen eher trivialen Charakter auf und 
+werden mit niedriger Priorität behandelt. Trotz ihrer geringen Priorität
+beanspruchen diese Fälle aufgrund ihrer hohen Anzahl erheblich Arbeitsaufwand
+in unserer Kunden-Support-Abteilung.
+Als Konsequenz gerieten auch einige komplexere 
+Support-Fälle mit höherer Priorität ins Hintertreffen.
+Das Hauptziel dieses Projekts besteht darin, 
+diese Arbeitsbelastung zu reduzieren. Hierfür wird ein autonomer 
+Bot entwickelt, der in der Lage ist, 
+diese trivialen Support-Fälle zu identifizieren und auf 
+Basis vorgefertigter E-Mail-Vorlagen und Anweisungen zu 
+bearbeiten. Dieser Ansatz zielt darauf ab, 
+die Ressourcen unserer Kunden-Support-Mitarbeiter effizienter zu nutzen und sicherzustellen, dass komplexere Fälle angemessen behandelt werden können.
 
 
 \subsection{Projektziel} 
 \label{sec:Projektziel}
+Das Hauptziel dieses Projekts besteht darin, 
+eine benutzerfreundliche Anwendung zu entwickeln,
+die auf einem lokalen Rechner eines erfahrenen Kundensupport-Mitarbeiters ausgeführt wird. 
+Diese Anwendung soll in der Lage sein, 
+Support-Fälle effizient, autonom und präzise zu bearbeiten.
+Die spezifischen Funktionalitäten der Anwendung umfassen:
 \begin{itemize}
-	\item Worum geht es eigentlich?
-	\item Was soll erreicht werden?
+	\item Die Klassifizierung von Support-Fällen basierend auf festgelegten Kriterien.
+	\item Die automatische Zuordnung der Klassifizierung zur richtigen E-Mail-Vorlage, um die Antwort auf den Support-Fall vorzubereiten.
+	\item Die Auswahl und Anwendung einer ausgewählten E-Mail-Vorlage auf den Support-Fall.
+	\item Die Einreichung des Support-Tickets über die Anwendungsschnittstelle der von unserem Kundensupport verwendeten Helpdesk-Software.
 \end{itemize}
-
+Ein Arbeitszyklus der Anwendung umfasst die genaue Klassifizierung, effiziente 
+Verwendung der E-Mail-Vorlagen und die zügige Einreichung eines Support-Tickets.
+Dieser Vorgang kann belibig oft wiederholt werden.
 
 \subsection{Projektbegründung} 
-\label{sec:Projektbegruendung}
-\begin{itemize}
-	\item Warum ist das Projekt sinnvoll (\zB Kosten- oder Zeitersparnis, weniger Fehler)?
-	\item Was ist die Motivation hinter dem Projekt?
-\end{itemize}
-
+Die Einführung der Anwendung bietet dem Unternehmen die Möglichkeit, 
+einen zeitunabhängigen und effizienten Kunden-Support zu gewährleisten. 
+Dies führt zu einer Entlastung des Kundensupport-Teams, da die Anwendung 
+eigenständig Support-Tickets analysiert, kategorisiert und geeignete Lösungen vorschlägt. 
+Die Automatisierung von wiederkehrenden und standardisierten 
+Anfragen ermöglicht es den Support-Mitarbeitern, sich verstärkt
+auf komplexe Support-Fälle zu konzentrieren.
 
 \subsection{Projektschnittstellen} 
 \label{sec:Projektschnittstellen}
+Unsere Anwendung wird mit den folgenden Schnittstellen interagieren:
 \begin{itemize}
-	\item Mit welchen anderen Systemen interagiert die Anwendung (technische Schnittstellen)?
-	\item Wer genehmigt das Projekt \bzw stellt Mittel zur Verfügung? 
-	\item Wer sind die Benutzer der Anwendung?
-	\item Wem muss das Ergebnis präsentiert werden?
+	\item Externe Schnittstelle - Zendesk: Die Anwendung wird die externe Zendesk-Anwendungsschnittstelle nutzen. 
+	Zendesk ist die von unseren Kunden-Support genutzte Helpdesk-Software.
+	Diese Schnittstelle ermöglicht es unserer Anwendung, 
+	direkt mit den Support-Fällen zu interagieren, sie zu klassifizieren, 
+	E-Mail-Vorlagen zuzuweisen und Support-Tickets über die Zendesk-Schnittstelle
+	einzureichen. Dies gewährleistet eine reibungslose Integration mit
+	unserem bestehenden Kundensupport-System.
+	\item Lokales \acs{GPT} -Modell: Um die natürliche Sprache der Support-Fälle zu klassifizieren, wird unsere Anwendung ein lokales \acs{GPT} -Modell nutzen. Dieses Modell spielt eine zentrale Rolle bei der Identifizierung der richtigen Klassifizierung und E-Mail-Vorlagen für die Support-Anfragen.
 \end{itemize}
+Es bestehen keine internen Schnittstellen zu anderen Anwendungen oder Systemen. 
+
 
 
 \subsection{Projektabgrenzung} 
 \label{sec:Projektabgrenzung}
+Aufgrund der begrenzten Zeitspanne von 70 Stunden Entwicklungszeit mussten folgende Einschränkungen und Abgrenzungen für dieses Projekt berücksichtigt werden:
 \begin{itemize}
-	\item Was ist explizit nicht Teil des Projekts (\insb bei Teilprojekten)?
+	\item Keine Benutzeroberfläche: Ein Benutzeroberfläche bietet für die Umsetzung des Projekts keinen erheblichen Mehrwert. Dies bedeutet, dass die Anwendung in erster Linie auf automatische Prozesse und Schnittstellen angewiesen ist. Benutzerinteraktion wird in dieser Version nicht unterstützt.
+	\item Nicht in der Cloud gehostet: Die Anwendung wird vorübergehend lokal auf einem Rechner eines Kundensupport-Mitarbeiters ausgeführt, um die Projektziele zu erreichen.
 \end{itemize}

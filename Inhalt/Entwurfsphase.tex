@@ -4,88 +4,103 @@
 
 \subsection{Zielplattform}
 \label{sec:Zielplattform}
+Bei Wahl der Zielplattform gab es einige Auswahlkriterien zu beachten, um die Implementierung zu erleichtern.
+Diese teilen sich in folgende Punkte auf.
 
+\paragraph{Schlankes und leistungsstarkes \ac{GPT}-Modell:} 
 \begin{itemize}
-	\item Beschreibung der Kriterien zur Auswahl der Zielplattform (\ua Programmiersprache, Datenbank, Client/Server, Hardware).
+	\item Die gewählte Zielplattform erforderte ein \ac{GPT} -Modell, das in der Lage ist, mit begrenzten Ressourcen in angemessener Zeit qualitativ hochwertige Antworten zu generieren.
 \end{itemize}
+
+\paragraph{Freie kommerzielle Nutzung des \ac{GPT}-Modells:} 
+\begin{itemize}
+	\item Die Möglichkeit, das \ac{GPT}-Modell kommerziell frei zu nutzen, ist ein wichtiger Faktor, um Lizenzbeschränkungen zu vermeiden.
+\end{itemize}
+
+\paragraph{Kompatibilität mit einem lokalen \ac{GPT}-Modell:} 
+\begin{itemize}
+	\item Die reibungslose Integration mit einem lokalen \ac{GPT}-Modell ist von entscheidender Bedeutung, um die Anforderungen mit dem fachgerechten Umgang mit personenbezogenen Daten, des Projekts zu erfüllen.
+\end{itemize}
+
+\paragraph{Kompatibilität mit der genutzten LangChain-Bibliothek:} 
+\begin{itemize}
+	\item Da die Kernlogik des Projekts hauptsächlich auf dem Datenaustausch zwischen dem lokalen \ac{GPT} -Modell und der Zendesk-\ac{API} basiert, war die Kompatibilität mit der LangChain-Bibliothek von großer Relevanz, da diese Bibliothek die Datem anreichert.
+\end{itemize}
+
+\paragraph{Erstellung eines ausführbaren Programms für macOS:} 
+\begin{itemize}
+	\item Die Zielplattform sollte die Möglichkeit bieten, ein ausführbares Programm für macOS zu generieren, um sicherzustellen, dass die Anwendung in der gewünschten Umgebung ausgeführt werden kann.
+\end{itemize}
+
+Basierend auf diesen Kriterien wurde die Entscheidung für das 7B \ac{LLaMA}-2 Modell
+von Meta als Zielplattform getroffen. Dieses Modell zeichnet sich durch seine 
+kompakte Größe von 13 \ac{GB} aus und kann auf einem Rechner mit lediglich einer \ac{CPU}
+und 16 \ac{GB} \ac{RAM} effizient betrieben werden.
+Die Auswahl der Programmiersprache wurde stark von der Kompatibilität mit dem \ac{GPT}-Modell 
+beeinflusst. Python wurde als die geeignete Programmiersprache gewählt, da sie eine 
+einfache Anbindung an die LangChain-Bibliothek ermöglicht, die wiederum die Verwaltung
+des \ac{GPT}-Modells erleichtert. Darüber hinaus bietet Python einen einfachen Weg, um 
+plattformunabhängige ausführbare Programme zu generieren.
 
 
 \subsection{Architekturdesign}
 \label{sec:Architekturdesign}
-\begin{itemize}
-	\item Beschreibung und Begründung der gewählten Anwendungsarchitektur (\zB \acs{MVC}).
-	\item \Ggfs Bewertung und Auswahl von verwendeten Frameworks sowie \ggfs eine kurze Einführung in die Funktionsweise des verwendeten Frameworks.
-\end{itemize}
-
-\paragraph{Beispiel}
-Anhand der Entscheidungsmatrix in Tabelle~\ref{tab:Entscheidungsmatrix} wurde für die Implementierung der Anwendung das \acs{PHP}-Framework Symfony\footnote{\Vgl \citet{Symfony}.} ausgewählt. 
-
-\tabelle{Entscheidungsmatrix}{tab:Entscheidungsmatrix}{Nutzwert.tex}
+Es wird entschieden eine objektorientierte
+Architektur zu verwenden, um die Anwendung in sinnvolle Entitäten zu strukturieren.
+Dies ermöglicht eine bessere Wartbarkeit und Erweiterbarkeit der einzelnen Funktionen,
+da sie mit geringeren Abhängigkeiten voneinander entwickelt werden können.
+Eine weitere wesentliche Entscheidung bestand darin, die LangChain-Bibliothek zu verwenden.
+Diese Bibliothek erfüllt mehrere wichtige Funktionen in der Architektur. 
+Zum einen ermöglicht sie die Anreicherung der Eingabe für das \ac{LLaMA}-2 Modell.
+Darüber hinaus bietet sie die Möglichkeit zur Verwaltung verschiedener Modelle. 
+Die Einbindung der LangChain Bibliothek spielt eine entscheidende Rolle, da sie dazu beiträgt, 
+den Inhalt der Support-Tickets effizienter zu verarbeiten.
+Eine ausführliche Auflistung der Klassen und deren Zusammenwirken finden Sie im \Anhang{app:Klassendiagramm}
 
 
 \subsection{Entwurf der Benutzeroberfläche}
 \label{sec:Benutzeroberflaeche} 
-\begin{itemize}
-	\item Entscheidung für die gewählte Benutzeroberfläche (\zB GUI, Webinterface).
-	\item Beschreibung des visuellen Entwurfs der konkreten Oberfläche (\zB Mockups, Menüführung).
-	\item \Ggfs Erläuterung von angewendeten Richtlinien zur Usability und Verweis auf Corporate Design.
-\end{itemize}
-
-\paragraph{Beispiel}
-Beispielentwürfe finden sich im \Anhang{app:Entwuerfe}.
+Für diese Anwendung wurde auf eine Benutzeroberfläche verzichtet.
 
 
 \subsection{Datenmodell}
 \label{sec:Datenmodell}
+Die Anwendung verwendet keine direkte Datenbankanbindung. 
+Da der Kundensupport bereits die Zendesk-Software für alle relevanten
+Anfragen verwendet, wird diese für das Überwachen und Persistieren  der 
+erforderlichen Daten genutzt. Die Anwendung greift auf die Daten in 
+Zendesk zu, ohne separate Datenbanken zu verwenden.
 
-\begin{itemize}
-	\item Entwurf/Beschreibung der Datenstrukturen (\zB \acs{ERM} und/oder Tabellenmodell, \acs{XML}-Schemas) mit kurzer Beschreibung der wichtigsten (!) verwendeten Entitäten.
-\end{itemize}
 
-\paragraph{Beispiel}
-In \Abbildung{ER} wird ein \ac{ERM} dargestellt, welches lediglich Entitäten, Relationen und die dazugehörigen Kardinalitäten enthält. 
 
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{ERDiagramm.pdf}{0.6}
-\caption{Vereinfachtes ER-Modell}
-\label{fig:ER}
-\end{figure} 
 
 
 \subsection{Geschäftslogik}
 \label{sec:Geschaeftslogik}
+Die Geschäftslogik der Anwendung besteht aus zwei zustandslosen 
+Entitäten, die jeweils als Wrapper für die Zendesk-Schnittstelle und dem \ac{LLaMA}-2-Modell fungieren. Diese Logik 
+teilt sich in den Datenaustausch mit der Zendesk-\ac{API} und die 
+Anreicherung von Texten mit dem \ac{LLaMA}-2-Modell auf.
+Der Prozess beginnt damit, Support-Tickets von der Zendesk-\ac{API} 
+abzurufen und die ausgewählten Eigenschaften in Support-Ticket-Entitäten 
+umzuwandeln. Als nächster Schritt erfolgt die Klassifizierung der Tickets,
+um das passende Makro aus Zendesk anzuwenden. Dieses Makro
+wird in einem POST-Request an die Zendesk-\ac{API} gesendet.
 
-\begin{itemize}
-	\item Modellierung und Beschreibung der wichtigsten (!) Bereiche der Geschäftslogik (\zB mit Kom\-po\-nen\-ten-, Klassen-, Sequenz-, Datenflussdiagramm, Programmablaufplan, Struktogramm, \ac{EPK}).
-	\item Wie wird die erstellte Anwendung in den Arbeitsfluss des Unternehmens integriert?
-\end{itemize}
 
-\paragraph{Beispiel}
-Ein Klassendiagramm, welches die Klassen der Anwendung und deren Beziehungen untereinander darstellt kann im \Anhang{app:Klassendiagramm} eingesehen werden.
-
-\Abbildung{Modulimport} zeigt den grundsätzlichen Programmablauf beim Einlesen eines Moduls als \ac{EPK}.
-\begin{figure}[htb]
-\centering
-\includegraphicsKeepAspectRatio{modulimport.pdf}{0.9}
-\caption{Prozess des Einlesens eines Moduls}
-\label{fig:Modulimport}
-\end{figure}
 
 
 \subsection{Maßnahmen zur Qualitätssicherung}
-\label{sec:Qualitaetssicherung}
-\begin{itemize}
-	\item Welche Maßnahmen werden ergriffen, um die Qualität des Projektergebnisses (siehe Kapitel~\ref{sec:Qualitaetsanforderungen}: \nameref{sec:Qualitaetsanforderungen}) zu sichern (\zB automatische Tests, Anwendertests)?
-	\item \Ggfs Definition von Testfällen und deren Durchführung (durch Programme/Benutzer).
-\end{itemize}
+Um die Qualität der Anwendung zu gewährleisten und einen reibungslosen Betrieb
+sicherzustellen, wurden Unit-Tests und Integrationstests implentiert. 
+Diese Tests ermöglichen die Überprüfung und Sicherstellung 
+der Kernlogik sowohl in ihren einzelnen Komponenten als auch als 
+Gesamtsystem ordnungsgemäß funktioniert.
+Dies trägt zur besseren Wartbarkeit und Erweiterbarkeit der Anwendung bei.
 
 
-\subsection{Pflichtenheft/Datenverarbeitungskonzept}
-\label{sec:Pflichtenheft}
-\begin{itemize}
-	\item Auszüge aus dem Pflichtenheft/Datenverarbeitungskonzept, wenn es im Rahmen des Projekts erstellt wurde.
-\end{itemize}
-
-\paragraph{Beispiel}
-Ein Beispiel für das auf dem Lastenheft (siehe Kapitel~\ref{sec:Lastenheft}: \nameref{sec:Lastenheft}) aufbauende Pflichtenheft ist im \Anhang{app:Pflichtenheft} zu finden.
+\subsection{Pflichtenheft}
+Der \Anhang{app:Pflichtenheft} umfasst alle technischen Kriterien, die in der Anwendung
+umgesetzt werden müssen. Es entstand aufgrund der Arbeitsergebnisse der 
+Entwurfsphase. Dieses Dokument ist von entscheidender Bedeutung für
+die präzise Planung der Implementierungsphase, da es Aufgaben definiert, die zeitlich gut einschätzbar sind.

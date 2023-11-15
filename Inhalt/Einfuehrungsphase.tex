@@ -1,9 +1,10 @@
 % !TEX root = ../Projektdokumentation.tex
 \section{Einführungsphase}
 \label{sec:Einfuehrungsphase}
-
-\begin{itemize}
-	\item Welche Schritte waren zum Deployment der Anwendung nötig und wie wurden sie durchgeführt (automatisiert/manuell)?
-	\item Wurden \ggfs Altdaten migriert und wenn ja, wie?
-	\item Wurden Benutzerschulungen durchgeführt und wenn ja, Wie wurden sie vorbereitet?
-\end{itemize}
+Da in unserem Unternehmen ausschließlich MacOS-Systeme verwendet werden, musste die Anwendung
+in ein ausführbares Applikationsbundle umgewandelt werden. Dieser Vorgang wurde manuell
+mithilfe des PyInstaller-Pakets durchgeführt. Um das \ac{LLaMA}-2-Modell einzubinden,
+mussten externe Abhängigkeiten referenziert werden. Anschließend wurden mit PyInstaller 
+alle Anwendungsdateien zu einer einzigen Datei gebündelt, die in ein ausführbares 
+Programm umgewandelt wurde. Da die Anwendung aus nur einer ausführbaren Datei besteht,
+war keine Schulung erforderlich.

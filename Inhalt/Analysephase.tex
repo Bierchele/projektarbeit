@@ -5,105 +5,148 @@
 
 \subsection{Ist-Analyse} 
 \label{sec:IstAnalyse}
+Der Ist-Zustand, wie bereits im Abschnitt 1.1 ``Projektumfeld'' beschrieben, 
+zeigt, dass im Kunden-Support vermehrt triviale und repetitive Kundenanfragen eingehen. 
+Diese Anfragen bestehen oft aus dem erneuten Verschicken von E-Mails mit gekauften Tickets, 
+dem Löschen von personenbezogenen Daten und der Umpersonalisierung von 
+ticketbezogenen Informationen. Der Kunden-Support bedient sich dabei der Webanwendung Zendesk, 
+welche die Nutzung von Makros ermöglicht. Makros sind vorgefertigte E-Mail-Vorlagen, 
+die bereits den passenden Text und gegebenenfalls Links enthalten.
+
+Die aktuelle Lage ergibt folgende Probleme:
+
 \begin{itemize}
-	\item Wie ist die bisherige Situation (\zB bestehende Programme, Wünsche der Mitarbeiter)?
-	\item Was gilt es zu erstellen/verbessern?
+	\item Manuelle Verknüpfung von Support-Ticket und Makro: Ein Support-Mitarbeiter muss den Inhalt eines Support-Tickets stets manuell mit dem passenden Makro verknüpfen, was zeitaufwändig und fehleranfällig ist.
+	\item Mangelnde Klassifizierung und automatische Anwendung: Zendesk bietet keine Möglichkeit, den Inhalt zu klassifizieren und das Makro eigenständig anzuwenden, was die Effizienz einschränkt.
+	\item Beeinträchtigung der Effizienz: Aufgrund der Menge dieser Anfragen werden andere Fälle vernachlässigt, hinzu kommt die zeitliche Begrenzung eines Mitarbeiters. Dies beeinflusst die Gesamteffizienz des Kunden-Supports und kann zu unzufriedenen Kunden führen.
 \end{itemize}
+
+
 
 
 \subsection{Wirtschaftlichkeitsanalyse}
 \label{sec:Wirtschaftlichkeitsanalyse}
-\begin{itemize}
-	\item Lohnt sich das Projekt für das Unternehmen?
-\end{itemize}
+
+Die Teilautomatisierung der in Abschnitt 3.1 ``Ist-Analyse'' beschriebenen Problemstellung bietet
+die Möglichkeit, die Wirtschaftlichkeit dieses Vorhabens zu validieren. Um dies zu erreichen,
+wird eine Prozesskostenrechnung durchgeführt, um die ungefähren Kosten der Bearbeitung eines 
+Support-Tickets zu ermitteln.
+
+Das Hauptziel dieser Wirtschaftlichkeitsanalyse besteht darin, die Amortisationsdauer des 
+Projekts zu bestimmen. Dies bedeutet, dass wir die erwarteten Projektkosten aus Abschnitt 3.3 
+``Projektkosten'' mit den eingesparten Kosten durch die Teilautomatisierung gegenüberstellen 
+werden.
+
+Die Prozesskostenrechnung ermöglicht es, die finanziellen Auswirkungen der 
+Implementierung der Lösung zu bewerten und festzustellen, 
+ob das Projekt in einem angemessenen Zeitrahmen Rendite erzielt.
 
 
-\subsubsection{\gqq{Make or Buy}-Entscheidung}
-\label{sec:MakeOrBuyEntscheidung}
-\begin{itemize}
-	\item Gibt es vielleicht schon ein fertiges Produkt, dass alle Anforderungen des Projekts abdeckt?
-	\item Wenn ja, wieso wird das Projekt trotzdem umgesetzt?
-\end{itemize}
 
 
 \subsubsection{Projektkosten}
 \label{sec:Projektkosten}
+
+\paragraph{Projekkostenrechnung} Die Kosten für das Projekt setzen sich aus verschiedenen Komponenten zusammen:
+
+
+\paragraph{Personalkosten:} 
 \begin{itemize}
-	\item Welche Kosten fallen bei der Umsetzung des Projekts im Detail an (\zB Entwicklung, Einführung/Schulung, Wartung)?
+	\item Als Auszubildender im dritten Lehrjahr beträgt mein Bruttogehalt 1145€ pro Monat.
+	\item Für die anderen Mitarbeiter wird pauschal ein Stundenlohn von 20€ angenommen.
 \end{itemize}
 
-\paragraph{Beispielrechnung (verkürzt)}
-Die Kosten für die Durchführung des Projekts setzen sich sowohl aus Personal-, als auch aus Ressourcenkosten zusammen.
-Laut Tarifvertrag verdient ein Auszubildender im dritten Lehrjahr pro Monat \eur{1000} Brutto. 
+\paragraph {Ressourcenkosten:}
+\begin{itemize}
+	\item 
+	Die allgemeinen Ressourcenkosten, einschließlich der Bürofläche und der Hardware, 
+   werden mit einem ungefähren Stundensatz von 15€ veranschlagt.
+\end{itemize}
+
 
 \begin{eqnarray}
 8 \mbox{ h/Tag} \cdot 220 \mbox{ Tage/Jahr} = 1760 \mbox{ h/Jahr}\\
-\eur{1000}\mbox{/Monat} \cdot 13,3 \mbox{ Monate/Jahr} = \eur{13300} \mbox{/Jahr}\\
-\frac{\eur{13300} \mbox{/Jahr}}{1760 \mbox{ h/Jahr}} \approx \eur{7,56}\mbox{/h}
+\eur{1250}\mbox{/Monat} \cdot 12 \mbox{ Monate/Jahr} = \eur{13745,6} \mbox{/Jahr}\\
+\frac{\eur{13745,6} \mbox{/Jahr}}{1760 \mbox{ h/Jahr}} \approx \eur{7,81}\mbox{/h}
 \end{eqnarray}
 
-Es ergibt sich also ein Stundenlohn von \eur{7,56}. 
-Die Durchführungszeit des Projekts beträgt 70 Stunden. Für die Nutzung von Ressourcen\footnote{Räumlichkeiten, Arbeitsplatzrechner etc.} wird 
-ein pauschaler Stundensatz von \eur{15} angenommen. Für die anderen Mitarbeiter wird pauschal ein Stundenlohn von \eur{25} angenommen. 
-Eine Aufstellung der Kosten befindet sich in Tabelle~\ref{tab:Kostenaufstellung} und sie betragen insgesamt \eur{2739,20}.
+Mit den angegebenen Komponenten und einer Projektdurchführungszeit von 70 Stunden
+belaufen sich die Projektkosten auf insgesamt \eur{2086,70}. In der unteren Tabelle~\ref{tab:Kostenaufstellung}
 \tabelle{Kostenaufstellung}{tab:Kostenaufstellung}{Kostenaufstellung.tex}
-
+befindet sich eine Veranschaulichung der einzelenen Kostenträger.
 
 \subsubsection{Amortisationsdauer}
-\label{sec:Amortisationsdauer}
+\label{sec:Amortisationsdauer} 
+
+Um die Amortisationsdauer zu bestimmen wurde mithilfe einer Prozesskostenrechnung
+der ungefähre Preis der Bearbeitung eines Tickets berechnet. 
+
+Die Komponenten der Berechnung bestehen aus:
+
+\paragraph {Eintrittshäufigkeit einer Aktivität:} 
 \begin{itemize}
-	\item Welche monetären Vorteile bietet das Projekt (\zB Einsparung von Lizenzkosten, Arbeitszeitersparnis, bessere Usability, Korrektheit)?
-	\item Wann hat sich das Projekt amortisiert?
+	\item Support-Ticket kategorisieren $  \approx  $ 10 \%  
+	\item Lösung recherchieren $  \approx  $ 20 \%
+	\item Kundenkorrespondenz $  \approx  $ 30 \%         	
 \end{itemize}
 
-\paragraph{Beispielrechnung (verkürzt)}
-Bei einer Zeiteinsparung von 10 Minuten am Tag für jeden der 25 Anwender und 220 Arbeitstagen im Jahr ergibt sich eine gesamte Zeiteinsparung von 
-\begin{eqnarray}
-25 \cdot 220 \mbox{ Tage/Jahr} \cdot 10 \mbox{ min/Tag} = 55000 \mbox{ min/Jahr} \approx 917 \mbox{ h/Jahr} 
-\end{eqnarray}
-
-Dadurch ergibt sich eine jährliche Einsparung von 
-\begin{eqnarray}
-917 \mbox{h} \cdot \eur{(25 + 15)}{\mbox{/h}} = \eur{36680}
-\end{eqnarray}
-
-Die Amortisationszeit beträgt also $\frac{\eur{2739,20}}{\eur{36680}\mbox{/Jahr}} \approx 0,07 \mbox{ Jahre} \approx 4 \mbox{ Wochen}$.
-
-
-\subsection{Nutzwertanalyse}
-\label{sec:Nutzwertanalyse}
+\paragraph{Mitarbeiter Effizienz:} 
 \begin{itemize}
-	\item Darstellung des nicht-monetären Nutzens (\zB Vorher-/Nachher-Vergleich anhand eines Wirtschaftlichkeitskoeffizienten). 
+	\item Jahresarbeitslohn  $  \approx  $ \eur{32.000,00} 
+	\item Jahresarbeitsminuten  $  \approx  $ 110min   	
 \end{itemize}
 
-\paragraph{Beispiel}
-Ein Beispiel für eine Entscheidungsmatrix findet sich in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}.
+\paragraph{Prozessmenge und neutrale Kosten:} 
+\begin{itemize}
+	\item Prozessmenge  $  \approx  $  38.000 Support-Tickets pro Jahr   
+	\item Leistungsmengenneutrale Kosten  $  \approx  $ 15\% 	
+\end{itemize}
+
+Verrechnet man diese Komponenten ergibt sich ein
+ungefährer Preis von \eur{2,06} pro Support-Ticket.
+Eine detaillierte Rechnung befindet sich im \Anhang{app:Prozesskosten}.
+
+Entnimmt man dem \Anhang{app:Amortisationsrechnung} die ungefähren laufenden Betriebtskosten des Projekts von
+\eur{0,40} und der geschätzen Arbeitsleistung von 10 Support-Tickets pro Tag 
+kommt man auf eine Amortisationsdauer von 103 Tage
+was ungefähr 3,3 Monaten entspricht. 
+Die genaue Aufstellung kann dem genannten Anhang entnommen werden.
+
+
+\subsubsection{\gqq{Make or Buy}-Entscheidung}
+\label{sec:MakeOrBuyEntscheidung}
+Die Entscheidung, keine alternative Software in Betracht zu ziehen und stattdessen 
+die Entwicklung mit \ac{GPT}-Modellen fortzusetzen, basierte auf mehreren Faktoren. 
+Die Sensibilität von personenbezogenen Daten und die Notwendigkeit, 
+strenge Datenschutz- und Sicherheitsrichtlinien 
+einzuhalten, erforderten eine Lösung, die diesen Anforderungen gerecht wird.
+Die Integration der entwickelten Lösung mit Zendesk und die Sicherstellung der Einhaltung 
+dieser Richtlinien waren von entscheidender Bedeutung. 
+Es gab keine vorhandene Software, die sowohl die erforderlichen Datenschutzstandards 
+erfüllte als auch nahtlos mit Zendesk integriert werden konnte
+und gleichzeitig einen niedrigeren wirtschaftlichen Aufwand mit sich brachte.
 
 
 \subsection{Anwendungsfälle}
 \label{sec:Anwendungsfaelle}
-\begin{itemize}
-	\item Welche Anwendungsfälle soll das Projekt abdecken?
-	\item Einer oder mehrere interessante (!) Anwendungsfälle könnten exemplarisch durch ein Aktivitätsdiagramm oder eine \ac{EPK} detailliert beschrieben werden. 
-\end{itemize}
-
-\paragraph{Beispiel}
-Ein Beispiel für ein Use Case-Diagramm findet sich im \Anhang{app:UseCase}.
+Das im \Anhang{app:UseCase} bildet 
+die zentralen Anwendungsfälle ab, die 
+Interaktionen zwischen Benutzern, Fremdsystemen und der Anwendung veranschaulichen. 
+Diese Anwendungsfälle werden während der Implementierung in die einzelnen 
+Features und Funktionen der Anwendung aufgeschlüsselt.
 
 
 \subsection{Qualitätsanforderungen}
 \label{sec:Qualitaetsanforderungen}
-\begin{itemize}
-	\item Welche Qualitätsanforderungen werden an die Anwendung gestellt (\zB hinsichtlich Performance, Usability, Effizienz \etc (siehe \citet{ISO9126}))?
-\end{itemize}
+Um die Qualität der Anwendung zu gewährleisten und Fehlerquellen zu minimieren,
+wurden bestimmte Schlüsselwörter festgelegt, die von der Anwendung zur
+Klassifizierung von Support-Tickets verwendet werden.
+Ein besonders wichtiger Aspekt dieser Qualitätsanforderungen besteht darin, 
+dass die Anwendung in der Lage sein muss, Halluzinationen oder 
+fehlerhafte Klassifizierungen des \ac{GPT}-Modelles zu verhindern. 
 
 
 \subsection{Lastenheft/Fachkonzept}
-\label{sec:Lastenheft}
-\begin{itemize}
-	\item Auszüge aus dem Lastenheft/Fachkonzept, wenn es im Rahmen des Projekts erstellt wurde.
-	\item Mögliche Inhalte: Funktionen des Programms (Muss/Soll/Wunsch), User Stories, Benutzerrollen
-\end{itemize}
-
-\paragraph{Beispiel}
-Ein Beispiel für ein Lastenheft findet sich im \Anhang{app:Lastenheft}. 
+In zusammenarbeit mit den Stakeholder haben sich im \Anhang{app:Lastenheft} 
+die sich darin befindlichen Anforderungen an die Anwendung herauskristallisiert.
+\clearpage

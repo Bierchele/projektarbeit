@@ -1,0 +1,336 @@
+\glsdefs@newdocentry{LLaMA}%
+{%
+name={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+sort={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+type={main},%
+first={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `LLaMA'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+firstplural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `LLaMA'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+text={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `LLaMA'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+plural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `LLaMA'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+description={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+descriptionplural={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{Large Language Model}%
+{%
+name={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+sort={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+type={main},%
+first={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Large Language Model'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+firstplural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Large Language Model'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+text={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Large Language Model'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+plural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Large Language Model'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+description={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+descriptionplural={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{LangChain}%
+{%
+name={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+sort={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+type={main},%
+first={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `LangChain'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+firstplural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `LangChain'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+text={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `LangChain'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+plural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `LangChain'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+description={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+descriptionplural={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{LLaMA.cpp}%
+{%
+name={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+sort={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+type={main},%
+first={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `LLaMA.cpp'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+firstplural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `LLaMA.cpp'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+text={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `LLaMA.cpp'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+plural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `LLaMA.cpp'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+description={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+descriptionplural={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{Generative pre-trained transformer}%
+{%
+name={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+sort={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+type={main},%
+first={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Generative pre-trained transformer'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+firstplural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Generative pre-trained transformer'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+text={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Generative pre-trained transformer'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+plural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Generative pre-trained transformer'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+description={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+descriptionplural={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{Halluzinationen}%
+{%
+name={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+sort={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+type={main},%
+first={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Halluzinationen'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+firstplural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Halluzinationen'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+text={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Halluzinationen'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+plural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Halluzinationen'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+description={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+descriptionplural={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{GPT-Generated Unified Format}%
+{%
+name={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+sort={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+type={main},%
+first={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `GPT-Generated Unified Format'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+firstplural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `GPT-Generated Unified Format'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+text={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `GPT-Generated Unified Format'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+plural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `GPT-Generated Unified Format'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+description={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+descriptionplural={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{Token}%
+{%
+name={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+sort={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+type={main},%
+first={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Token'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+firstplural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Token'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+text={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Token'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+plural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Token'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+description={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+descriptionplural={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{Zendesk}%
+{%
+name={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+sort={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+type={main},%
+first={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Zendesk'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+firstplural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Zendesk'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+text={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Zendesk'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+plural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Zendesk'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+description={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+descriptionplural={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{Makro}%
+{%
+name={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+sort={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+type={main},%
+first={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Makro'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+firstplural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Makro'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+text={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Makro'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+plural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `Makro'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+description={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+descriptionplural={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{POST-Request}%
+{%
+name={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+sort={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+type={main},%
+first={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `POST-Request'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+firstplural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `POST-Request'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+text={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `POST-Request'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+plural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `POST-Request'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+description={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+descriptionplural={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{API-Token}%
+{%
+name={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+sort={\PackageError {glossaries}{name key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry name}},%
+type={main},%
+first={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `API-Token'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+firstplural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `API-Token'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+text={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `API-Token'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}},%
+plural={\protect \GenericError  {(glossaries)                }{Package glossaries Error: name key required in \newglossaryentry for entry `API-Token'}{See the glossaries package documentation for explanation.}{You haven't specified the entry name}s},%
+description={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+descriptionplural={\PackageError {glossaries} {description key required in \string \newglossaryentry \space for entry `\@glo@label '}{You haven't specified the entry description}},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+
